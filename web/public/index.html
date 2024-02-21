@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Inspector Catcher and Har Generator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Browser Inspector Catcher and Har Generator</h1>
+
+    <label for="browserSelect">Choose Browser:</label>
+    <select id="browserSelect">
+        <option value="chrome">Google Chrome</option>
+        <option value="edge">Microsoft Edge</option>
+    </select>
+
+    <button id="launchDefaultButton">Launch on Default Port 9222</button>
+    <p>Or launch on your custom port</p>
+    <form id="debugForm" action="/startDebugging" method="post">
+        <label for="portInput">Enter Port Number:</label>
+        <input type="number" id="portInput" name="port" required>
+        <button type="button" id="customPort">Start Debugging</button>
+    </form>
+
+    <hr>
+    <button class="btn">See JSON of active Tabs</button>
+
+    <!-- Adding Fetched Title and type -->
+    <div id="listContainer">
+        <!-- List items will be dynamically added here -->
+    </div>
+    <script src="../handle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+
+
+</body>
+
+</html>
